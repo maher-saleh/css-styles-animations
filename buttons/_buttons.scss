@@ -1,0 +1,55 @@
+* {
+    text-transform: uppercase;
+}
+
+div#buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: white;
+
+    button.pixel-btn {
+        position: relative;
+        width: 180px;
+        height: 60px;
+        cursor: pointer;
+        outline: 0;
+        border: 0;
+
+        &:hover .pixel {
+            opacity: 1;
+        }
+        
+        span {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .pixel-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            background-color: #333;
+        }
+
+        .pixel {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            pointer-events: none;
+            background: var(--clr);
+            border: 1px solid rgba(0, 0, 0, 0.25);
+            transition: opacity 0.3s ease;
+            opacity: 0;
+        }
+    }
+}
+

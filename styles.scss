@@ -1,0 +1,49 @@
+@use './buttons/buttons';
+
+@font-face {
+    font-family: 'ArialBlk';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./assets/fonts/ARIBLK.woff') format('woff');
+}
+
+body {
+    margin: 0;
+    padding: 2em;
+    box-sizing: border-box;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "system-ui", "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #1a1a1a;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    width: 100%;
+    background-color: #5d5d5d;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    // font-weight: bold;
+    font-family: 'ArialBlk';
+    z-index: 1;
+}
+
+p {
+    font-size: 12px;
+    margin: 0;
+}
+p, span {
+    font-family: inherit;
+    letter-spacing: -0.7px;
+    color: #888;
+}
+
+span:nth-child(2) {
+    color: #b1b1b1;
+}
