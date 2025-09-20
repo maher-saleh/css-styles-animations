@@ -1,10 +1,16 @@
 @use './buttons/buttons';
+@use './cursor/cursor';
 
 @font-face {
     font-family: 'ArialBlk';
     font-style: normal;
     font-weight: normal;
     src: url('./assets/fonts/ARIBLK.woff') format('woff');
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -17,6 +23,14 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #1a1a1a;
+    overflow: hidden;
+    background-image: linear-gradient(to right, #333 1px,
+    transparent 1px), linear-gradient(to bottom, #333 1px,
+    transparent 1px);
+    background-size: 4vh 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
