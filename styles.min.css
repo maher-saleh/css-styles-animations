@@ -70,7 +70,7 @@ div#progress-container {
   color: white;
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   gap: 40px;
