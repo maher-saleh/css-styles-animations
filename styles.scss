@@ -1,5 +1,6 @@
 @use './buttons/buttons';
 @use './cursor/cursor';
+@use './progress/progress';
 
 @font-face {
     font-family: 'ArialBlk';
@@ -31,33 +32,39 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 20px;
-    width: 100%;
-    background-color: #333;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    // font-weight: bold;
-    font-family: 'ArialBlk';
-    z-index: 1;
-}
+    #container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
 
-p {
-    font-size: 12px;
-    margin: 0;
-}
-p, span {
-    font-family: inherit;
-    letter-spacing: -0.7px;
-    color: #888;
-}
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 20px;
+        width: 100%;
+        background-color: #333;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        // font-weight: bold;
+        font-family: 'ArialBlk';
+        z-index: 1;
 
-span:nth-child(2) {
-    color: #b1b1b1;
+        p {
+            font-size: 12px;
+            margin: 0;
+        }
+        p, span {
+            font-family: inherit;
+            letter-spacing: -0.7px;
+            color: #888;
+        }
+
+        span:nth-child(2) {
+            color: #b1b1b1;
+        }
+    }
 }

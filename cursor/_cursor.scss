@@ -3,10 +3,11 @@
     top: 0px;
     left: 20px;
     pointer-events: none;
+    z-index: -1;
 
     .text {
         position: absolute;
-        font-size: 1.5em;
+        font-size: 2em;
         color: #00ff9a;
         text-shadow: 0 0 15px #00ff9a,
         0 0 50px #00ff9a;

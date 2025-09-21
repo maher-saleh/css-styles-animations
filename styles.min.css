@@ -53,14 +53,70 @@ div#buttons button.pixel-btn .pixel {
   top: 0px;
   left: 20px;
   pointer-events: none;
+  z-index: -1;
 }
 #cursor .text {
   position: absolute;
-  font-size: 1.5em;
+  font-size: 2em;
   color: #00ff9a;
   text-shadow: 0 0 15px #00ff9a, 0 0 50px #00ff9a;
   text-transform: uppercase;
   transform: translate(-50%, -50%);
+}
+
+div#progress-container {
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+div#progress-container h1 {
+  color: white;
+}
+div#progress-container .progress {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  color: #fff;
+  background: #444 linear-gradient(to right, transparent 50%, var(--clr) 0);
+}
+div#progress-container .progress h3 {
+  position: absolute;
+  margin: 0;
+  top: 45%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+  z-index: 1;
+  font-weight: 500;
+}
+div#progress-container .progress h3 span {
+  font-size: 0.65em;
+  font-weight: 400;
+}
+div#progress-container .progress h4 {
+  position: absolute;
+  margin: 0;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  font-weight: 500;
+  color: var(-- clr);
+  text-transform: uppercase;
+}
+div#progress-container .progress::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  background: #222;
+  border-radius: 50%;
 }
 
 @font-face {
@@ -89,8 +145,12 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-footer {
+body #container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+body footer {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -103,19 +163,16 @@ footer {
   font-family: "ArialBlk";
   z-index: 1;
 }
-
-p {
+body footer p {
   font-size: 12px;
   margin: 0;
 }
-
-p, span {
+body footer p, body footer span {
   font-family: inherit;
   letter-spacing: -0.7px;
   color: #888;
 }
-
-span:nth-child(2) {
+body footer span:nth-child(2) {
   color: #b1b1b1;
 }
 
